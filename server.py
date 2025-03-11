@@ -7,27 +7,27 @@ app = Flask(__name__)
 projects = [
     {
         "id": 1,
-        "title": "--PLACEHOLDER--",
-        "description": "--PLACEHOLDER----PLACEHOLDER----PLACEHOLDER--.",
-        "image": "114.png",
+        "title": "Coming Soon",
+        "description": "Work in progress.",
+        "image": "loading.jpg",
         "demo_link": "https://your-live-demo-url.com/budget-tracker",
         "github_link": "https://github.com/yourusername/budget-tracker"
 
     },
     {
         "id": 2,
-        "title": "--PLACEHOLDER--",
-        "description": "--PLACEHOLDER----PLACEHOLDER----PLACEHOLDER--.",
-        "image": "116.png",
+        "title": "Coming Soon",
+        "description": "Work in progress.",
+        "image": "loading.jpg",
         "demo_link": "https://your-live-demo-url.com/budget-tracker",
         "github_link": "https://github.com/yourusername/budget-tracker"
 
     },
     {
         "id": 3,
-        "title": "--PLACEHOLDER--",
-        "description": "--PLACEHOLDER----PLACEHOLDER----PLACEHOLDER--.",
-        "image": "117.png",
+        "title": "Coming Soon",
+        "description": "Work in progress.",
+        "image": "loading.jpg",
         "demo_link": "https://your-live-demo-url.com/budget-tracker",
         "github_link": "https://github.com/yourusername/budget-tracker"
 
@@ -41,7 +41,7 @@ profile = {
     "about": [
         "Hi again, in case you forgot, I'm Mathias, I'm an aspiring <span class='highlight-word'>backend developer</span> with a love for creating <span class='highlight-word'>innovative</span> and <span class='highlight-word'>efficient</span> solutions to unique problems.",
         "I'm currently pursuing education in backend-programming to deepen my expertise, building on several years of self-taught coding experience.",
-        "My technological journey began in my childhood when I started experimenting with <span class='highlight-word'>HTML</span>, <span class='highlight-word'>Python</span>, and <span class='highlight-word'>CSS</span>—skills, which I've been refining ever since. This early foundation helped me develop a strong understanding of coding fundamentals.",
+        "My programming journey began in my youth when I started experimenting with <span class='highlight-word'>HTML</span>, <span class='highlight-word'>Python</span>, and <span class='highlight-word'>CSS</span>—skills, which I've been refining ever since. This early foundation helped me develop a strong understanding of coding fundamentals.",
         "I believe in continuous learning and constantly challange myself to expand my knowledge. My goal is to create <span class='highlight-word'>efficient</span>, <span class='highlight-word'>scalable</span>, and <span class='highlight-word'>maintainable</span> systems that solve <span class='highlight-word'>real-world problems</span>."
     ],
     'social': {
