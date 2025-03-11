@@ -1,0 +1,730 @@
+/* Main styles for enhanced space-themed portfolio */
+
+body {
+    background: linear-gradient(135deg, #0e0a30 0%, #1e1255 40%, #24084d 80%, #1b0440 100%);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Container for static decorative elements */
+#static-decorations {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Stars styling */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.4;
+    --original-opacity: 0.4;
+    --blink-duration: 4s;
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    background: rgba(4, 1, 21, 0.42);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(141, 66, 216, 0.2);
+}
+
+.logo {
+    color: #b069ff;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 5%;
+    justify-content: space-between;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: #a64dff;
+    transform: translateY(-2px);
+}
+
+.download-cv {
+    background: rgb(101, 66, 148);
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(122, 29, 255, 0.5);
+}
+
+.download-cv:hover {
+    background: #a164ef;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(122, 29, 255, 0.7);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 10%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Enhanced image borders for portfolio images */
+
+/* Hero section image */
+.image-container img {
+    max-width: 400px;
+    border-radius: 20px; /* Slightly reduced from 30px */
+    box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.6); /* Slightly darker shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid transparent; /* Changed from solid color to transparent */
+    background: linear-gradient(to right, #ffffff, #ff83d8); /* Gradient background */
+    background-clip: padding-box; /* Ensures the gradient doesn't affect content */
+    padding: 3px; /* Padding to show the gradient border */
+    position: relative;
+}
+
+.image-container img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(141, 66, 216, 0.6); /* Enhanced shadow on hover */
+}
+
+/* About section profile image */
+.profile-image {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 15px; /* Changed from 20px */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border: none; /* Removed solid border */
+    padding: 4px; /* Added padding for border effect */
+    background: linear-gradient(135deg, #ff83d8, #ffffff); /* Diagonal gradient */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: translateY(-10px) rotate(2deg); /* Added slight rotation on hover */
+    box-shadow: 0 15px 30px rgba(166, 77, 255, 0.6);
+}
+
+/* Project image customization */
+.project-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    position: relative;
+    background-color: rgba(20, 0, 40, 0.5);
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); /* Added shadow */
+    border: 2px solid rgba(122, 29, 255, 0.3); /* Subtle border */
+}
+
+.project-image:hover img {
+    transform: translateX(-50%) scale(1.05); /* Added zoom effect on hover */
+    filter: brightness(1.1); /* Slightly brighten image on hover */
+}
+
+.content {
+    max-width: 600px;
+}
+
+/* Updates to make greeting text closer to name */
+
+.content h1 {
+    font-size: 2em;
+    line-height: 1.2; /* Reduced from 1.5 to 1.2 */
+    white-space: nowrap;
+    margin-bottom: 20px; /* Add a smaller bottom margin */
+}
+
+.content h2 {
+    font-size: 2.5em;
+    line-height: 0.3;
+    margin-top: 0; /* Ensure there's no extra top margin */
+}
+
+.content h3 {
+    font-size: 1em;
+    line-height: 1;
+}
+
+.highlight {
+    color: #b069ff;
+    text-shadow: 0 0 5px rgba(176, 105, 255, 0.3);
+}
+
+/* Fix for typing animation to maintain consistent height */
+.typing {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: visible;
+    min-height: 24px; /* Set a consistent minimum height */
+    position: relative;
+    border-right: none;
+    height: 24px; /* Set a fixed height */
+    vertical-align: bottom; /* Ensure proper vertical alignment */
+    line-height: 24px; /* Match the height */
+    margin-top: 15px; /* Adjust this value as needed */
+}
+
+/* Keep only one cursor with proper positioning */
+.typing::after {
+    content: '|';
+    display: inline;
+    position: absolute;
+    right: -4px;
+    top: 0; /* Ensure it stays at the top */
+    animation: blink 0.8s infinite;
+}
+
+/* Blinking animation for the cursor */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Make sure the parent container also maintains consistent height */
+h3 {
+    min-height: 24px; /* Match the typing element height */
+    margin: 0; /* Remove margin that could cause jumps */
+    padding: 0;
+    line-height: 24px; /* Consistent line height */
+}
+
+/* Wave animation for the hand emoji */
+.wave {
+    display: inline-block;
+    animation: wave-animation 2.5s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Section Styles */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 60px 0;
+    text-align: center;
+    font-size: 2em;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.about-image {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border: 3px solid #5a1db8;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(166, 77, 255, 0.5);
+}
+
+.about-text {
+    flex: 0 0 60%;
+    text-align: left;
+    font-size: 0.5em;
+    line-height: 1.6;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.about-text p:first-child {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(166, 77, 255, 0.5);
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #a64dff;
+    bottom: -10px;
+    left: 25%;
+    box-shadow: 0 0 10px rgba(166, 77, 255, 0.8);
+}
+
+/* Social Icons Section */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background: rgba(115, 74, 173, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(42, 6, 89, 0.5);
+}
+
+.icon-circle:hover {
+    background: #a164ef;
+    box-shadow: 0 0 20px rgba(122, 29, 255, 0.7);
+}
+
+.social-icon i {
+    font-size: 35px;
+    color: white;
+}
+
+.social-icon span {
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Projects container */
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: rgba(4, 1, 21, 0.42);
+    border-radius: 15px;
+    padding: 25px;
+    width: 320px;
+    text-align: left;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(166, 77, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(166, 77, 255, 0.4);
+}
+
+.project-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    position: relative;
+    background-color: rgba(20, 0, 40, 0.5);
+    text-align: center;
+}
+
+.project-image img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 230px;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    color: #b069ff;
+}
+
+.project-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    flex-grow: 1;
+}
+
+.project-link {
+    background: rgba(154, 89, 255, 0.72);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    align-self: flex-start;
+    margin-top: auto;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(122, 29, 255, 0.4);
+}
+
+@media (max-width: 1100px) {
+    .projects-container {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 700px) {
+    .projects-container {
+        max-width: 340px;
+    }
+}
+
+.project-link:hover {
+    background: #9340ff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(122, 29, 255, 0.7);
+}
+
+/* Blinking Cursor Effect */
+.typing::after {
+    content: "|";
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Background glow */
+.background-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.7;
+    mix-blend-mode: screen;
+    filter: blur(100px);
+}
+
+/* Logo link styling */
+.logo-link {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
+/* Star blinking animation */
+@keyframes starBlink {
+    0% { opacity: var(--original-opacity); }
+    40% { opacity: var(--original-opacity); }
+    50% { opacity: 0.1; }
+    60% { opacity: var(--original-opacity); }
+    100% { opacity: var(--original-opacity); }
+}
+
+.star.blinking {
+    animation: starBlink var(--blink-duration) infinite;
+}
+
+/* Error message styling */
+.error-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(30, 5, 70, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(166, 77, 255, 0.5);
+}
+/* Name hover effect - add to your styles.css file */
+.highlight {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+    transform: translateY(-5px);
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -14px;
+    left: 0;
+    background-color: #b069ff;
+    box-shadow: 0 0 8px rgba(176, 105, 255, 0.8);
+    transition: width 0.3s ease;
+}
+
+.highlight:hover::after {
+    width: 100%;
+}
+/* Updated location indicator styling with reduced top margin */
+.location {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    margin-top: -15px;     /* Reduced from 5px to -5px to move it closer to the name */
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.location:hover {
+    color: #b069ff;
+    transform: translateY(-2px);
+}
+
+.location i {
+    color: #b069ff;
+    margin-right: 8px;
+    font-size: 1.1em;
+    animation: pulse 2s infinite;
+}
+
+/* Subtle pulsing animation for the pin icon */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+/* Clipboard Message Styling */
+.clipboard-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: rgba(63, 41, 84, 0.8);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    text-align: center;
+    font-weight: 500;
+    pointer-events: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.clipboard-message.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Add a hover effect to the email button to indicate it's clickable */
+#copy-email-btn {
+    cursor: pointer;
+}
+
+#copy-email-btn:hover .icon-circle {
+    background: #a164ef;
+    box-shadow: 0 0 20px rgba(73, 40, 117, 0.8);
+}
+.highlight-word {
+    color: #ff83d8; /* This is the purple color used elsewhere */
+    text-shadow: 0 0 5px rgba(176, 105, 255, 0.3);
+    transition: color 0.3s ease;
+}
+/* Container for project links */
+.project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased from 10px to 15px to add more space between buttons */
+    margin-top: auto;
+    width: 100%;
+    align-items: flex-start; /* This aligns the buttons to the left */
+}
+
+/* Base styling for both buttons (shared properties) */
+.project-link {
+    background: #7a1dff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px; /* Horizontal padding for shorter buttons */
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    width: 28%; /* This makes the buttons half as long */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(44, 43, 43, 0.48);
+}
+
+.project-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(44, 43, 43, 0.48);
+}
+
+/* Live Demo button specific styling */
+.demo-link {
+    background: #654294;
+    margin-bottom: 5px;
+}
+
+.demo-link:hover {
+    background: #a164ef;
+}
+
+/* GitHub button specific styling */
+.github-link {
+    background: #212020;
+}
+
+.github-link:hover {
+    background: #555555;
+}
